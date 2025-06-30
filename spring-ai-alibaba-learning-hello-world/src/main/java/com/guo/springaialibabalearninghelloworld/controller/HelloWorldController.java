@@ -12,14 +12,14 @@ import reactor.core.publisher.Flux;
  */
 @RestController
 @RequestMapping("/helloworld")
-public class HelloWorldController {
+public class HelloworldController {
 
     private static final String DEFAULT_PROMPT = "你是一个博学的智能聊天助手，请根据用户提问回答";
 
     private final ChatClient dashScopeChatClient;
 
     // 构造器注入
-    public HelloWorldController(ChatClient.Builder chatClientBuilder) {
+    public HelloworldController(ChatClient.Builder chatClientBuilder) {
         this.dashScopeChatClient = chatClientBuilder
                 .defaultSystem(DEFAULT_PROMPT)
 //                .defaultAdvisors(new SimpleLoggerAdvisor())
